@@ -22,21 +22,23 @@ function App() {
 
   return (
     <div className="App">
-      <input
+      <input className="border mt-6"
         type="text"
         placeholder="Ingresa un nombre"
         onChange={caracterSearch}
       />
       {users ? (
-        users.map((user) => {
+        <div className="max-w-lg mx-auto">
+          {users.map((user) => {
           return (
-            <div key={user.name}>
-              <User user={user} />
-            </div>
+             
+              <User user={user} key={user.name} />
+            
           );
-        })
+        })}
+        </div>
       ) : (
-        <span>cargando...</span>
+        <span className="mx-4">cargando...</span>
       )}
     </div>
   );

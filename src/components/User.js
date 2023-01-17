@@ -1,7 +1,22 @@
-const User = ({user}) => {
+
+const User=({user})=>{
     return(
-        <div className={`cursor-pointer rounded-full flex gap-4 items-center my-3 border-2 border-solid border-green-200 `}>
-            <span>{user.name} {user.height} {user.mass} {user.hair_color} {user.skin_color} {user.eye_color} {user.birth_year} {user.gender} </span>
+        <div className="flex flex-col">
+            <div className="text-lg ">
+            {user.name}
+            </div>
+            <div className="flex space-x-4">
+                <ul>
+                    <li>{user.height}</li>
+                    <li>{user.mass}</li>
+                    <li>{user.hair_color}</li>
+                </ul>
+                <ul>
+                    <li>{user.eye_color}</li>
+                    <li>{user.birth_year}</li>
+                    <li>{user.gender}</li>
+                </ul>
+            </div>
         </div>
     )
 }
