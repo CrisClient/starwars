@@ -10,7 +10,9 @@ function App() {
     fetch("https://swapi.dev/api/people/?search=" + caracter)
       .then((result) => result.json())
       .then((data) => {
-        setUsers(data.results);
+        if(caracter.length>0){
+          setUsers(data.results)
+        }
       });
   }, [caracter]);
 
